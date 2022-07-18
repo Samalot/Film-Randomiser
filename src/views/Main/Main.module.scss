@@ -1,0 +1,33 @@
+.container {
+	background-color: green;
+	display: inline-flex;
+	width: 600px;
+	margin: 50px;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.break {
+	width: 0;
+	// flex-basis: 100%;
+}
+
+.item1 {
+	background-color: red;
+	margin: 10px;
+}
+
+.item2 {
+	background-color: blue;
+	margin: 10px;
+}
+
+.item3 {
+	background-color: purple;
+	margin: 10px;
+}
+
+.item4 {
+	background-color: yellow;
+	margin: 10px;
+}
