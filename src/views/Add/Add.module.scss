@@ -1,0 +1,59 @@
+@import "../../style/colors";
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.accordian > div {
+  background-color: whitesmoke !important;
+}
+
+.filmContainer {
+  display: flex;
+}
+
+.filmImgContainer {
+  display: inline-block;
+  border: solid 0px grey;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.filmImg{
+  height: 200px;
+}
+
+.filmInfoContianer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.filmTitle {
+  margin: 0;
+}
+
+.filmPlot {
+
+}
+
+.editRow {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: $primaryDark !important;
+}
+
+.button:hover {
+  background-color: $primaryDark !important;
+  filter: brightness(80%);
+}

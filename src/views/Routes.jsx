@@ -1,15 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Error from "./Error/Error";
 import Main from "./Main/Main";
-// import Example from "./Example/Example";
+import Add from "./Add/Add";
 
 const Routes = () => {
   return (
 		<Switch>
-			<Route path="/" component={Main} exact />
-			<Route component={Error} />
+			<Route path={`${process.env.PUBLIC_URL}/`} component={Main} exact />
+			<Route path={`${process.env.PUBLIC_URL}/add`} component={Add} exact />
 		</Switch>
 	);
 }

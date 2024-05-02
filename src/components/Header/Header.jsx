@@ -2,34 +2,22 @@ import React from "react";
 import { createStructuredSelector } from 'reselect';
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { injectIntl } from 'react-intl'
-import { getUsername } from '../../utils/duck'
-import { types, defaultProps } from './HeaderTypes.js'
+import { injectIntl } from 'react-intl';
+import { Link } from "react-router-dom";
 
-import styles from './Header.scss';
+import styles from './Header.module.scss';
 
 
-const Header = ({
-	intl: {
-		messages: {
-			projectTitle
-		}
-	},
-	username,
-}) => {
+const Header = () => {
   return (
 		<div className={styles.headerContainer}>
-			{ projectTitle }
+			<Link to={`${process.env.PUBLIC_URL}/`} className={styles.link}> 🎥 Film </Link> 
+			<Link to={`${process.env.PUBLIC_URL}/add`} className={styles.link}> ➕ Add </Link>
 		</div>
 	);
 }
 
-Header.propTypes = types;
-Header.defaultProps = defaultProps;
-
-const mapStateToProps = createStructuredSelector({
-	username: getUsername,
-});
+const mapStateToProps = createStructuredSelector({});
 
 const hocChain = compose(
 	injectIntl,
